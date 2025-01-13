@@ -17,7 +17,7 @@ body
 {
     height: 100vh; /* View Height */
     background-image: linear-gradient(180deg,#1d232e,#111420);
-    transition: .7s;
+    transition: .4s;
 }
 /* CABECALHO */
 
@@ -47,6 +47,7 @@ body
 {
     position: absolute;
     top: 40%;
+    font-style: italic;
     margin-left: 10px;
     color: #5F9EFF;
     transition: .5s;
@@ -78,7 +79,7 @@ body
     position: relative;
     display: inline-block;
     width: 70px;
-    transition: 0.7s;
+    transition: 0.4s;
     height: 35px;
 }
 .deslizar
@@ -90,7 +91,7 @@ body
     right: 0;
     bottom: 0;
     background-image: linear-gradient(210deg,#8fb5c0,#5F9EFF);
-    transition: 0.7s;
+    transition: 0.4s;
     border-radius: 12px;
 }
 .deslizar::before
@@ -101,19 +102,17 @@ body
     width: 26px;
     left: 4px;
     bottom: 4px;
-    transition: 0.7s;
+    transition: 0.4s;
     background-image: url(../imgf/lua_icon.png);
 }
 input[type='checkbox']:checked + .deslizar
 {
     background-image: linear-gradient(160deg,#556279,#1E2434);
-    transition: 0.7s;
 }
 input[type='checkbox']:checked + .deslizar::before
 {
-    transform: translateX(35px);
+    transform: translateX(35px) rotate(180deg);
     background-image: url(../imgf/sol_icon.png);
-    transition: 0.7s;
 }
 
 /* LOGO GRANDE */
@@ -131,14 +130,14 @@ input[type='checkbox']:checked + .deslizar::before
     border-radius: 15%;
     max-width: 800px;
     height: auto;
-    box-shadow: #70a3f0 0 0 26px;
+    box-shadow: #70a3f0 0 0 50px;
 }
 
 /* LIGHT MODE */
 
 .light-mode
 {
-    transition: 0.7s;
+    transition: 0.4s;
     background-image: linear-gradient(180deg,rgb(219, 233, 227),#8fb5c0);
     color: black;
 }
@@ -156,8 +155,8 @@ input[type='checkbox']:checked + .deslizar::before
 }
 .light-mode5
 {
-    color: white !important;
-    background-image: linear-gradient(160deg,#556279,#1E2434) !important;
+    color: #b3d0d8 !important;
+    background: linear-gradient(160deg,#556279,#1E2434) !important;
     box-shadow: #151a27 0 0 26px !important;
 }
 .light-mode6
@@ -167,7 +166,7 @@ input[type='checkbox']:checked + .deslizar::before
 .light-mode7
 {
     color: white !important;
-    background-image: linear-gradient(210deg,#556279,#1E2434) !important;
+    background-image: linear-gradient(160deg,#424f64,#1E2434) !important;
 }
 
 /* BOTAO */
@@ -180,8 +179,8 @@ input[type='checkbox']:checked + .deslizar::before
     height: 100%;
     padding: 20px 40px;
     font-size: 20px;
-    color: #1E2434;
-    background-image: linear-gradient(210deg,#8fb5c0,#5F9EFF);
+    color: #2c3349;
+    background-image: linear-gradient(1600deg,#8fb5c0,#5F9EFF);
     border-radius: 15px;
     box-shadow: #5F9EFF 0 0 26px;
     border: none;
@@ -189,22 +188,32 @@ input[type='checkbox']:checked + .deslizar::before
 .botao_sbms:hover
 {
     color: #121621;
-    background-image: linear-gradient(210deg,#668c97,#2862b8);
-    transition: background-image 0.5s ease;
+    background-image: linear-gradient(160deg,#668c97,#2862b8);
+    animation: teste 2s ease-in-out infinite;
 }
 
 .botao_sbms:active
 {
     color: #000000;
-    background-image: linear-gradient(210deg,#406570,#144692);
-    transition: background-image 0.5s ease;
+    background-image: linear-gradient(160deg,#406570,#144692);
+}
+
+@keyframes teste
+{
+    100%
+    {
+        transform: tr
+    }
 }
 
 /* TEXTO */
 
 #texto
 {
-    padding: 10px;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
     text-align: center;
     color: black;
 }
@@ -216,8 +225,33 @@ input[type='checkbox']:checked + .deslizar::before
     margin: 40px;
     position: relative;
     top: 15.8vh;
-    background-image: linear-gradient(210deg,#8fb5c0,#5F9EFF);
+    background-image: linear-gradient(160deg,#8fb5c0,#5F9EFF);
     border-radius: 20px;
     height: 800px;
     margin-bottom: 40px;
+}
+
+/* ARRUMANDO TAMANHO */
+
+@media (max-width: 768px) {
+    .cabecalho {
+        padding: 8px;
+        flex-direction: column;
+    }
+    
+    .imagem_logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .botao_sbms {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+
+    .caixa1 {
+        margin: 20px;
+        height: auto;
+        top: 10vh;
+    }
 }
