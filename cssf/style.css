@@ -248,10 +248,10 @@ input[type='checkbox']:checked + .deslizar::before
 {  
     margin: 50px;
     text-align: center;
-    position: relative;
 }
 .slogan
 {
+    width: 45%;
     font-size: 25px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     background-image: linear-gradient(160deg,#61b1c7,#4086f0);
@@ -265,11 +265,11 @@ input[type='checkbox']:checked + .deslizar::before
 }
 
 @keyframes escrever {
-  0%,8%,100% {
+  0%,5%,75%,100% {
     width: 0;
   }
-  35%,75% {
-    width: 510px;
+  25%,75% {
+    width: 33ch;
   }
 }
 
@@ -296,6 +296,19 @@ input[type='checkbox']:checked + .deslizar::before
         margin: 20px;
         height: auto;
         top: 10vh;
+    }
+
+    .slogan
+    {
+        width: 45%;
+        font-size: 25px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        background-image: linear-gradient(160deg,#61b1c7,#4086f0);
+        background-clip: text;
+        color: transparent;
+        overflow: hidden;
+        border-right: none;
+        animation: none;
     }
 }
 @media (max-width: 550px)
