@@ -7,12 +7,13 @@
     padding: 0;
     appearance: none;
     box-sizing: border-box;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
 body
 {
     background-color: #111420;
 }
+
 .fundo_inicial
 {
     height: 100vh; /* View Height */
@@ -33,7 +34,10 @@ body
     background-image: linear-gradient(180deg,#333c4ddc,#151a27da);
     padding: 10px;
     width: 100vw;
-    border-radius: 7px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
     z-index: 10;
 }
 
@@ -45,6 +49,7 @@ body
 }
 .texto_logo
 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     position: absolute;
     top: 40%;
     font-style: italic;
@@ -71,7 +76,7 @@ body
 .modo /* ARRUMAR NO CABECALHO */
 {
     width: 70px;
-    margin-right: 1%;
+    margin-right: 1.5%;
 }
 
 .base1
@@ -122,7 +127,7 @@ input[type='checkbox']:checked + .deslizar::before
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 75px;
+    gap: 80px;
 }
 .imagem_logo2
 {
@@ -130,7 +135,12 @@ input[type='checkbox']:checked + .deslizar::before
     border-radius: 15%;
     max-width: 800px;
     height: auto;
-    box-shadow: #70a3f0 0 0 50px;
+    box-shadow: #70a3f0 0 0 40px;
+    transition: transform 0.3s ease;
+}
+.imagem_logo2:hover
+{
+    transform: scale(1.05);
 }
 
 /* LIGHT MODE */
@@ -173,7 +183,9 @@ input[type='checkbox']:checked + .deslizar::before
 
 .botao_sbms
 {
-    margin-top: 100px;
+    font-family: 'Fira Code', monospace;
+    cursor: pointer;
+    display: inline-block;
     position: relative;
     width: 100%;
     height: 100%;
@@ -184,32 +196,27 @@ input[type='checkbox']:checked + .deslizar::before
     border-radius: 15px;
     box-shadow: #5F9EFF 0 0 26px;
     border: none;
+    transition: transform 0.3s ease;
 }
 .botao_sbms:hover
 {
+    transform: scale(1.2);
     color: #121621;
     background-image: linear-gradient(160deg,#668c97,#2862b8);
-    animation: teste 2s ease-in-out infinite;
 }
 
 .botao_sbms:active
 {
+    transform: scale(0.8);
     color: #000000;
     background-image: linear-gradient(160deg,#406570,#144692);
-}
-
-@keyframes teste
-{
-    100%
-    {
-        transform: tr
-    }
 }
 
 /* TEXTO */
 
 #texto
 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     padding-bottom: 40px;
     padding-top: 40px;
     padding-left: 50px;
@@ -224,11 +231,24 @@ input[type='checkbox']:checked + .deslizar::before
 {
     margin: 40px;
     position: relative;
-    top: 15.8vh;
+    top: 14.8vh;
     background-image: linear-gradient(160deg,#8fb5c0,#5F9EFF);
     border-radius: 20px;
     height: 800px;
-    margin-bottom: 40px;
+}
+
+/* SLOGAN DA EMPRESA */
+
+.base3
+{  
+    margin: 50px;
+    text-align: center;
+    position: relative;
+}
+.slogan
+{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
 }
 
 /* ARRUMANDO TAMANHO */
@@ -237,11 +257,6 @@ input[type='checkbox']:checked + .deslizar::before
     .cabecalho {
         padding: 8px;
         flex-direction: column;
-    }
-    
-    .imagem_logo {
-        width: 40px;
-        height: 40px;
     }
 
     .botao_sbms {
@@ -253,5 +268,12 @@ input[type='checkbox']:checked + .deslizar::before
         margin: 20px;
         height: auto;
         top: 10vh;
+    }
+}
+@media (max-width: 550px)
+{
+    .imagem_logo {
+        width: 80px;
+        height: 80px;
     }
 }
