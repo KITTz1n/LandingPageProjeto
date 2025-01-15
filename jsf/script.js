@@ -32,7 +32,7 @@ botao.addEventListener('change', () => {
         corpo.id = '';
         botao_sbms.id = '';
         imagem_grande.forEach(i => {
-            i.i = '';
+            i.id = '';
         });
         caixa1.id = '';
         slogan.id = '';
