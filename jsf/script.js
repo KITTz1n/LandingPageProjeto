@@ -5,16 +5,37 @@ const logo_escrita = document.querySelector('.texto_logo');
 const botao_sbms = document.querySelector('.centro .centro2 .botao_sbms');
 const imagem_grande = document.querySelectorAll('.base2 .imagem_logo2');
 const caixa1 = document.querySelector('.caixa1');
+const slogan = document.querySelector('.base3 .slogan');
+const texto1 = document.getElementById('texto1');
 const corpo = document.body;
 
 botao.addEventListener('change', () => {
-    fundo1.classList.toggle('light-mode');
-    cabecalho.classList.toggle('light-mode2');
-    logo_escrita.classList.toggle('light-mode3');
-    corpo.classList.toggle('light-mode4');
-    botao_sbms.classList.toggle('light-mode5');
-    imagem_grande.forEach(i => {
-        i.classList.toggle('light-mode6');
-    });
-    caixa1.classList.toggle('light-mode7');
+    if (botao.checked)
+    {
+        fundo1.id = 'light-mode1';
+        cabecalho.id = 'light-mode2';
+        logo_escrita.id = 'light-mode3';
+        corpo.id = 'light-mode4';
+        botao_sbms.id = 'light-mode5';
+        imagem_grande.forEach(i => {
+            i.id = 'light-mode6';
+        });
+        caixa1.id = 'light-mode7';
+        slogan.id = 'light-mode8';
+        texto1.id = 'light-mode9';
+    }
+    else
+    {
+        fundo1.id = '';
+        cabecalho.id = '';
+        logo_escrita.id = '';
+        corpo.id = '';
+        botao_sbms.id = '';
+        imagem_grande.forEach(i => {
+            i.i = '';
+        });
+        caixa1.id = '';
+        slogan.id = '';
+        texto1.id = 'texto1';
+    }
 });
