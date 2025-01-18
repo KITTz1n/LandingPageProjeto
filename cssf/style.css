@@ -32,7 +32,9 @@ body
 
 .cab2
 {
+    padding: .4%;
     display: flex;
+    width: calc(100vw - 21.6px);
     justify-content: space-between;
     align-items: center;
 }
@@ -40,28 +42,41 @@ body
 {
     position: fixed;
     background-image: linear-gradient(180deg,#333c4ddc,#151a27da);
-    padding: 10px;
     width: 100vw;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
     z-index: 10;
+}
+.cabecalho a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
 }
 
 /* LOGO NO CABECALHO */
 
-.imagem_logo
-{
+.imagem_logo {
     border-radius: 20%;
 }
-.texto_logo
-{
-    position: absolute;
-    top: 40%;
+
+.texto_logo {
     font-style: italic;
     margin-left: 10px;
     color: #5F9EFF;
+    font-size: 18px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Espaçamento à direita */
+}
+
+/* LINKS NO CABECALHO */
+
+.links
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 20%;
+    cursor: pointer;
 }
 
 /* CENTRALIZAR */
@@ -82,7 +97,7 @@ body
 .modo /* ARRUMAR NO CABECALHO */
 {
     width: 70px;
-    margin-right: 1.5%;
+    margin-right: calc(1% + 2vw);
 }
 
 .base1
@@ -304,10 +319,13 @@ input[type='checkbox']:checked + .deslizar::before
 
 /* ARRUMANDO TAMANHO */
 
-@media (max-width: 768px) {
-    .cabecalho {
-        padding: 8px;
-        flex-direction: column;
+@media (max-width: 768px)
+{
+    .cab2
+    {
+        display: flex;
+        align-items: center;
+        width: 100vw
     }
 
     .botao_sbms {
@@ -329,11 +347,36 @@ input[type='checkbox']:checked + .deslizar::before
         border-right: none;
         animation: none;
     }
+    #light-mode8
+    {
+        width: 100%;
+        font-size: 25px;
+        white-space: normal;
+        border-right: none;
+        animation: none;
+    }
 }
 @media (max-width: 550px)
 {
     .imagem_logo {
-        width: 80px;
-        height: 80px;
+        width: 40px; /* Ajuste da logo para telas menores */
+        height: 40px;
+    }
+    .texto_logo {
+        font-size: 16px; /* Ajuste no tamanho do texto */
+    }
+}
+@media (max-width: 438px)
+{
+    .modo
+    {
+        flex-direction: column;
+    }
+    .cabecalho
+    {
+        position: fixed;
+        background-image: linear-gradient(180deg,#333c4ddc,#151a27da);
+        width: 100vw;
+        z-index: 10;
     }
 }
