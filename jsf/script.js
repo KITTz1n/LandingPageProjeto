@@ -39,3 +39,51 @@ botao.addEventListener('change', () => {
         texto1.id = 'texto1';
     }
 });
+
+class Navbar
+{
+    constructor(MenuCelular, NavList, NavLinks)
+    {
+        this.menucelular = document.querySelector(MenuCelular);
+        this.navlist = document.querySelector(NavList);
+        this.navlinks = document.querySelectorAll(NavLinks);
+        this.classeAtiva = "ativo";
+
+        this.Clicar = this.Clicar.bind(this);
+    }
+
+    AnimarLinks()
+    {
+        this.navlinks.forEach((link, index) => {
+            link.style.animation   ? (link.style.animation = "")
+            : (link.style.animation = `navlinksAparece .5s ease forwards ${index/7 + .3}s`);
+        });
+    }
+
+    Clicar()
+    {
+        this.navlist.classList.toggle(this.classeAtiva);
+        this.AnimarLinks();
+    }
+
+    addClickEvent()
+    {
+        this.menucelular.addEventListener("click", this.Clicar);
+    }
+
+    init()
+    {
+        if (this.menucelular)
+        {
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+
+const navbar = new Navbar(
+    ".menu-celular",
+    ".nav-list",
+    ".nav-list li",
+);
+navbar.init();
