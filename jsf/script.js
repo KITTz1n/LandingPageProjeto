@@ -7,6 +7,8 @@ const imagem_grande = document.querySelectorAll('.base2 .imagem_logo2');
 const caixa1 = document.querySelector('.caixa1');
 const slogan = document.querySelector('.base3 .slogan');
 const texto1 = document.getElementById('texto1');
+const a = document.querySelectorAll('a');
+const 
 const corpo = document.body;
 
 botao.addEventListener('change', () => {
@@ -23,6 +25,9 @@ botao.addEventListener('change', () => {
         caixa1.id = 'light-mode7';
         slogan.id = 'light-mode8';
         texto1.id = 'light-mode9';
+        a.forEach(w => {
+            w.id = 'light-mode10';
+        });
     }
     else
     {
@@ -37,6 +42,9 @@ botao.addEventListener('change', () => {
         caixa1.id = '';
         slogan.id = '';
         texto1.id = 'texto1';
+        a.forEach(w => {
+            w.id = '';
+        });
     }
 });
 

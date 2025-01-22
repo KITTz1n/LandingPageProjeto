@@ -233,7 +233,7 @@ input[type='checkbox']:checked + .deslizar::before
 }
 #light-mode3
 {
-    color: #151a27;
+    color: black;
 }
 #light-mode4
 {
@@ -276,11 +276,20 @@ input[type='checkbox']:checked + .deslizar::before
     text-align: center;
     color: white;
 }
+#light-mode10
+{
+    color: black;
+}
+#light-mode11
+{
+    background-color: #bad4db;
+}
 
 /* BOTAO */
 
 .botao_sbms
 {
+    letter-spacing: 2px;
     font-weight: 850;
     cursor: pointer;
     display: inline-block;
@@ -289,7 +298,7 @@ input[type='checkbox']:checked + .deslizar::before
     height: 100%;
     padding: 20px 40px;
     font-size: 20px;
-    color: #2c3349;
+    color: #000000;
     background-image: linear-gradient(1600deg,#8fb5c0,#5F9EFF);
     border-radius: 15px;
     box-shadow: #5F9EFF 0 0 20px;
@@ -345,6 +354,7 @@ input[type='checkbox']:checked + .deslizar::before
 }
 .slogan
 {
+    letter-spacing: 2px;
     width: 45%;
     font-size: 25px;
     background-image: linear-gradient(160deg,#61b1c7,#4086f0);
@@ -362,7 +372,7 @@ input[type='checkbox']:checked + .deslizar::before
     width: 0;
   }
   25%,75% {
-    width: 35ch;
+    width: 40ch;
   }
 }
 
