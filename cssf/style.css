@@ -48,7 +48,6 @@ body
     width: calc(100vw - 21.6px);
     justify-content: space-around;
     align-items: center;
-    height: 12vh;
 }
 .cabecalho
 {
@@ -60,12 +59,12 @@ body
 
 /* LINKS NO CABECALHO */
 
-.nav-list
+.nav-list /* <---- LISTA DE LINKS */
 {
     list-style: none;
     display: flex;
 }
-.nav-list li
+.nav-list li /* <--- LINKS */
 {
     letter-spacing: 3px;
     margin-left: 32px;
@@ -75,18 +74,46 @@ body
     transform: translateX(0);
 }
 
+/* 3 TRACOS */
+
 .menu-celular
 {
     display: none;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 22px;
 }
-
-.menu-celular div
+.tracos
 {
+    position: absolute;
+    bottom: 49.5%;
+    background-color: white;
     width: 32px;
     height: 2px;
+}
+.tracos::before
+{
+    content: "";
+    position: absolute;
+    top: 8px;
     background-color: white;
-    margin: 8px;
+    width: 32px;
+    height: 2px;
+}
+.tracos::after
+{
+    content: "";
+    position: absolute;
+    bottom: 8px;
+    background-color: white;
+    width: 32px;
+    height: 2px;
+}
+.menu-celular:hover
+{
+    opacity: .3;
 }
 
 /* LOGO NO CABECALHO */
@@ -356,10 +383,10 @@ input[type='checkbox']:checked + .deslizar::before
     .nav-list
     {
         position: absolute;
-        top: 12vh;
+        top: 100px;
         right: 0;
         width: 50vw;
-        height: 92vh;
+        height: 93.25vh;
         background-color: #151a27da;
         flex-direction: column;
         align-items: center;
@@ -369,7 +396,7 @@ input[type='checkbox']:checked + .deslizar::before
     }
     .nav-list li
     {
-        margin-left: 0;
+        margin: 0;
         opacity: 0;
     }
     .menu-celular
@@ -416,10 +443,6 @@ input[type='checkbox']:checked + .deslizar::before
 }
 @media (max-width: 550px)
 {
-    .imagem_logo {
-        width: 40px; /* Ajuste da logo para telas menores */
-        height: 40px;
-    }
     .texto_logo {
         font-size: 16px; /* Ajuste no tamanho do texto */
     }
