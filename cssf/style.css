@@ -245,11 +245,18 @@ input[type='checkbox']:checked + .deslizar::before
     background: linear-gradient(160deg,#556279,#1E2434);
     box-shadow: #5b5b5b 0 0 20px;
 }
+#light-mode5:hover
+{
+    transform: scale(1.2);
+}
+#light-mode5:active
+{
+    transform: scale(.9);
+}
 #light-mode6
 {
     box-shadow: #434343 0 0 40px;
 }
-
 #light-mode7
 {
     box-shadow: #5b5b5b 0 0 20px;
@@ -282,7 +289,13 @@ input[type='checkbox']:checked + .deslizar::before
 }
 #light-mode11
 {
-    background-color: #bad4db;
+    background-color: #236b9e5f;
+}
+#light-mode12,
+#light-mode12::after,
+#light-mode12::before
+{
+    background-color: black;
 }
 
 /* BOTAO */
@@ -308,14 +321,12 @@ input[type='checkbox']:checked + .deslizar::before
 .botao_sbms:hover
 {
     transform: scale(1.2);
-    color: #121621;
     background-image: linear-gradient(160deg,#668c97,#2862b8);
 }
 
 .botao_sbms:active
 {
     transform: scale(0.9);
-    color: #000000;
     background-image: linear-gradient(160deg,#406570,#144692);
 }
 
@@ -486,4 +497,17 @@ input[type='checkbox']:checked + .deslizar::before
         opacity: 1;
         transform: translateX(0);
     }
+}
+.caixa3
+{
+    position: absolute;
+    top: 2215px;
+    width: 50px;
+    height: 60px;
+    border: 1px solid red;
+    text-align: center;
+}
+.creditos
+{
+    color: white;
 }

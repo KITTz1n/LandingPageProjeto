@@ -8,7 +8,8 @@ const caixa1 = document.querySelector('.caixa1');
 const slogan = document.querySelector('.base3 .slogan');
 const texto1 = document.getElementById('texto1');
 const a = document.querySelectorAll('a');
-const 
+const menulateral = document.querySelector('.nav-list');
+const tracos = document.querySelector('.menu-celular .tracos');
 const corpo = document.body;
 
 botao.addEventListener('change', () => {
@@ -28,6 +29,9 @@ botao.addEventListener('change', () => {
         a.forEach(w => {
             w.id = 'light-mode10';
         });
+        menulateral.id = 'light-mode11';
+        tracos.id = 'light-mode12';
+
     }
     else
     {
@@ -45,6 +49,8 @@ botao.addEventListener('change', () => {
         a.forEach(w => {
             w.id = '';
         });
+        menulateral.id = '';
+        tracos.id = '';
     }
 });
 
