@@ -10,6 +10,7 @@ const texto1 = document.getElementById('texto1');
 const a = document.querySelectorAll('a');
 const menulateral = document.querySelector('.nav-list');
 const tracos = document.querySelector('.menu-celular .tracos');
+const strong = document.querySelectorAll('strong');
 const corpo = document.body;
 
 botao.addEventListener('change', () => {
@@ -31,6 +32,9 @@ botao.addEventListener('change', () => {
         });
         menulateral.id = 'light-mode11';
         tracos.id = 'light-mode12';
+        strong.forEach(s => {
+            s.id = '';
+        });
 
     }
     else
