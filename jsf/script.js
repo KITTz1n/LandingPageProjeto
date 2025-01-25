@@ -1,5 +1,4 @@
 const botao = document.getElementById('botao');
-const fundo1 = document.querySelector('.fundo_inicial');
 const cabecalho = document.querySelector('.cabecalho');
 const logo_escrita = document.querySelector('.texto_logo');
 const botao_sbms = document.querySelector('.centro .centro2 .botao_sbms');
@@ -16,7 +15,6 @@ const corpo = document.body;
 botao.addEventListener('change', () => {
     if (botao.checked)
     {
-        fundo1.id = 'light-mode1';
         cabecalho.id = 'light-mode2';
         logo_escrita.id = 'light-mode3';
         corpo.id = 'light-mode4';
@@ -39,7 +37,6 @@ botao.addEventListener('change', () => {
     }
     else
     {
-        fundo1.id = '';
         cabecalho.id = '';
         logo_escrita.id = '';
         corpo.id = '';
