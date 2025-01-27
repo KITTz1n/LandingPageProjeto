@@ -70,6 +70,7 @@ body
     border-bottom: 3px solid #236b9e;
     width: 100vw;
     z-index: 10;
+    transition: .3s ease-in;
 }
 
 /* LINKS NO CABECALHO */
@@ -510,8 +511,7 @@ input[type='checkbox']:checked + .deslizar::before
 }
 .caixa3
 {
-    position: absolute;
-    top: 2215px;
+    position: relative;
     width: 50px;
     height: 60px;
     border: 1px solid red;
