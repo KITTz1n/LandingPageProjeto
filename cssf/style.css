@@ -34,24 +34,25 @@ body
     background-color: #111420;
 }
 
-.fundo_inicial
-{
+.fundo_inicial {
     position: relative;
 }
-.fundo_inicial::before
-{
+
+.fundo_inicial::before {
     position: absolute;
     content: "";
     background-size: cover;
     background-position: center;
     top: 122px;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%),url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%),
+        url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
     background-repeat: no-repeat;
     width: 100vw;
-    height: 1200px;
+    height: 75vh;
     z-index: -1;
     filter: blur(10px);
 }
+
 /* CABECALHO */
 
 .cab2
@@ -365,7 +366,8 @@ input[type='checkbox']:checked + .deslizar::before
     top: 14.8vh;
     background-image: linear-gradient(160deg,#8fb5c0,#5F9EFF);
     border-radius: 20px;
-    height: 800px;
+    height: auto;
+    min-height: 500px; /* Ajuste conforme necessário */
 }
 
 /* SLOGAN DA EMPRESA */
@@ -442,6 +444,20 @@ input[type='checkbox']:checked + .deslizar::before
         background-color: #bad4db;
         border-left: 2px solid black;
     }
+    .fundo_inicial::before {
+        position: absolute;
+        content: "";
+        background-size: cover;
+        background-position: center;
+        top: 122px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%),
+            url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 65vh;
+        z-index: -1;
+        filter: blur(10px);
+    }
 }
 @media (max-width: 768px)
 {
@@ -478,6 +494,20 @@ input[type='checkbox']:checked + .deslizar::before
         white-space: normal;
         border-right: none;
         animation: none;
+    }
+    .fundo_inicial::before {
+        position: absolute;
+        content: "";
+        background-size: cover;
+        background-position: center;
+        top: 122px;
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%),
+            url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 55vh;
+        z-index: -1;
+        filter: blur(10px);
     }
 }
 @media (max-width: 550px)
