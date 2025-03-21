@@ -36,6 +36,9 @@ body
 
 .fundo_inicial {
     position: relative;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
 }
 
 .fundo_inicial::before {
@@ -47,12 +50,13 @@ body
     background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 70%, rgba(0, 0, 0, 0.8) 100%),
         url('https://media.istockphoto.com/id/537331500/photo/programming-code-abstract-technology-background-of-software-deve.jpg?s=612x612&w=0&k=20&c=jlYes8ZfnCmD0lLn-vKvzQoKXrWaEcVypHnB5MuO-g8=');
     background-repeat: no-repeat;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
     width: 100vw;
     height: 75vh;
-    z-index: -1;
+    z-index: -3;
     filter: blur(10px);
 }
-
 /* CABECALHO */
 
 .cab2
@@ -228,7 +232,7 @@ input[type='checkbox']:checked + .deslizar::before
     border-radius: 15%;
     max-width: 800px;
     height: auto;
-    box-shadow: #70a3f0 0 0 40px;
+    box-shadow: #111420 0 0 40px;
     transition: transform 0.3s ease;
 }
 .imagem_logo2:hover
@@ -272,7 +276,7 @@ input[type='checkbox']:checked + .deslizar::before
 }
 #light-mode6
 {
-    box-shadow: #434343 0 0 40px;
+    box-shadow: #d4e8ee 0 0 40px;
 }
 #light-mode7
 {
@@ -343,6 +347,37 @@ input[type='checkbox']:checked + .deslizar::before
     background-image: linear-gradient(160deg,#406570,#144692);
 }
 
+/* CARD */
+.listacard
+{
+    display: flex;
+    margin: 40px 0 0 0;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.listacard .card
+{
+    margin: 10px 10px 10px;
+    background-color: #111420;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+}
+.listacard:not(:hover)
+{
+    filter: blur(3px);
+    opacity: 0.8;
+}
+.listacard:hover> :not(:hover)
+{
+    filter: blur(3px);
+    opacity: 0.5;
+}
+
 /* TEXTO */
 
 #texto1
@@ -361,9 +396,7 @@ input[type='checkbox']:checked + .deslizar::before
 .caixa1
 {
     box-shadow: #70a3f0 0 0 20px;
-    margin: 40px;
-    position: relative;
-    top: 14.8vh;
+    margin: 14.8vh 50px 30px 50px;
     background-image: linear-gradient(160deg,#8fb5c0,#5F9EFF);
     border-radius: 20px;
     height: auto;
@@ -391,6 +424,16 @@ input[type='checkbox']:checked + .deslizar::before
     margin: 0 auto;
     animation: escrever 6s steps(40) infinite, piscando .75s step-end infinite;
 }
+
+/* CREDITOS */
+.creditos
+{
+    text-align: center;
+    color: white;
+    margin-bottom: 25px;
+}
+
+/* RESTO */
 
 @keyframes escrever {
   0%,5%,75%,100% {
@@ -538,16 +581,4 @@ input[type='checkbox']:checked + .deslizar::before
         opacity: 1;
         transform: translateX(0);
     }
-}
-.caixa3
-{
-    position: relative;
-    width: 50px;
-    height: 60px;
-    border: 1px solid red;
-    text-align: center;
-}
-.creditos
-{
-    color: white;
 }
